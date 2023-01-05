@@ -1,0 +1,11 @@
+[core]
+    editor = vim
+    filemode = false
+[credential]
+    helper = store
+[user]
+	name = jy5275
+	email = yanjiangpku@gmail.com
+
+[push]
+	default = simple
