@@ -1,21 +1,23 @@
 #!/bin/bash
 
-# Linux platform setup
+# Copy config files
+if grep -q "#force_color_prompt=yes" ~/.bashrc; then
+    sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/' ~/.bashrc
+    echo "Enabled force_color_prompt in .bashrc"
+else
+    echo "Failed to enable force_color_prompt"
+fi
+cp .bash_aliases ~/
+cp .vimrc ~/
+cp .tmux.conf ~/
 
-mkdir repos
-mkdir Downloads
+mkdir -p ~/repos
+mkdir -p ~/Downloads
 
-# 1. setup git credentials
-cp .gitconfig ~/
+# Copy AIPRM binaries
+cp Downloads/* ~/Downloads/
 
-# 1. copy config: .bashrc
-# uncomment: force_color_prompt=yes
-
-
-# 2. vimrc, .tmux.conf
-
-# 2. setup git
-
-# 3. sshkey-gen
-
-# 4. apt install
+# install go1.21
+cd ~/Downloads && wget https://go.dev/dl/go1.21.8.linux-amd64.tar.gz
+tar -xzf go1.21.8.linux-amd64.tar.gz
+echo "go1.21 installed"
