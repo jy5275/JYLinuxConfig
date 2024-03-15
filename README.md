@@ -75,6 +75,8 @@ Clone this repos and run `init.sh` (DO NOT use sudo!)
 
 ## Hosts
 
+For WSL, need to update `C:\Windows\System32\drivers\etc\hosts`, instead of the hosts on WSL!
+
 ```sh
 sudo chmod a+w /etc/hosts
 sudo cat hosts >> /etc/hosts
