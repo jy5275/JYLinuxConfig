@@ -73,6 +73,14 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
 
 Clone this repos and run `init.sh` (DO NOT use sudo!)
 
+## Hosts
+
+```sh
+sudo chmod a+w /etc/hosts
+sudo cat hosts >> /etc/hosts
+sudo chmod 644 /etc/hosts
+```
+
 ## Install necessary softwares
 
 ```sh
