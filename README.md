@@ -87,7 +87,7 @@ sudo chmod 644 /etc/hosts
 
 ```sh
 sudo apt update
-sudo apt install -y tmux git docker.io
+sudo apt install -y tmux git make docker.io
 
 # docker permission
 sudo groupadd docker
