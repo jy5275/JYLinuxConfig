@@ -95,3 +95,11 @@ sudo gpasswd -a $USER docker
 sudo systemctl restart docker
 sudo chmod a+rw /var/run/docker.sock
 ```
+
+## Software on Windows
+- Platform: Chrome, Google Drive, WSL
+- IDE: VSCode, (GoLand)
+- DevTool: Xshell, Xftp, DBeaver, Postman
+- Comm: WeChat, Slack, WhatsApp, Telegram
+- Network: Surfshark, V2rayN
+- Learning: Eudic
