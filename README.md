@@ -110,10 +110,39 @@ sudo systemctl restart docker
 sudo chmod a+rw /var/run/docker.sock
 ```
 
-## Software on Windows
+
+## New Windows Setup
+
+### Overall
 - Platform: Chrome, Google Drive, WSL
 - IDE: VSCode, (GoLand)
 - DevTool: Xshell, Xftp, DBeaver, Postman
 - Comm: WeChat, Slack, WhatsApp, Telegram
 - Network: Surfshark, V2rayN
-- Learning: Eudic
+- Learning: Eudic, Foxit
+
+### Chrome
+- Login to Google Account
+
+### WSL
+- Install by cmd `wsl --install`
+- Linux Env Setup as above
+- Enable SSH access
+- Copy Windows Key to `authorized_keys`
+
+### Xshell, Xftp
+- Font & Line Cursor
+- Hot Key: cpy, paste, search
+
+### VSCode
+- Line Cursor
+- Extension install
+
+### Eudic
+- Dark mode
+- My custom dict import
+- Hot Key: openwindow
+- Launch on start
+
+### Foxit
+- Dark mode
