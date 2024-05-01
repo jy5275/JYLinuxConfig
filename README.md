@@ -67,6 +67,20 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
     ```sh
     git config --local user.name "yan.jiang"
     git config --local user.email "yan.jiang@aiprm.org"
+    
+    # ====================== OR ======================
+
+    for dir in */; do
+        # Navigate into the subdirectory
+        cd "$dir" || exit
+
+        # Execute git commands
+        git config --local user.name "yan.jiang"
+        git config --local user.email "yan.jiang@aiprm.org"
+
+        # Navigate back to the parent directory
+        cd ..
+    done
     ```
 
 ## Config files, bash init, go1.21
