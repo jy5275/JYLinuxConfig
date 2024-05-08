@@ -23,4 +23,4 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 umask 002
 
-export PATH=/home/ubuntu/go/bin:/home/ubuntu/Downloads/go/bin:/home/ubuntu/Downloads:$PATH
+export PATH=$HOME/go/bin:$HOME/Downloads/go/bin:$HOME/Downloads:$HOME/.local/bin:$PATH

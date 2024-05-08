@@ -21,5 +21,3 @@ cp Downloads/* ~/Downloads/
 cd ~/Downloads && wget https://go.dev/dl/go1.21.8.linux-amd64.tar.gz
 tar -xzf go1.21.8.linux-amd64.tar.gz
 echo "go1.21 installed"
-
-echo "export PATH=/home/$USER/Downloads:/home/$USER/Downloads/go/bin:$PATH" >> /home/$USER/.bashrc
