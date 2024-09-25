@@ -10,7 +10,7 @@ alias m='more -10 -d'
 alias e='exit'
 alias ..='cd ..'
 alias md='mkdir'
-alias fordu='for i in `ls -a`; do echo -n "$i: "; sudo du -sh $i; done'
+alias du='du -sh'
 alias s='source'
 
 alias gs='git status'
