@@ -4,20 +4,21 @@
 
 Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
 
-1. Generate two ssh keys
+1. Generate ssh key
 
     ```sh
     ssh-keygen -t rsa -C "yanjiangpku@gmail.com"
-    # Name: id_rsa_github
-
-    ssh-keygen -t rsa -C "yan.jiang@aiprm.org"
-    # Name: id_rsa_aiprm
+    # Name: id_rsa
     ```
 
-2. Upload new Pubkeys to github/gitlab
+2. GitHub setup
     > Github SSH Key: <https://github.com/settings/keys>
-    >
-    > Gitlab SSH Key: <https://gl2.deliverwows.org:10443/-/profile/keys>
+    
+    Then test authentication:
+
+    ```sh
+    ssh -T git@github.com
+    ```
 
 3. Setup ssh config. Copy to `~/.ssh/config`:
 
@@ -25,29 +26,10 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
     Host github.com
         HostName github.com
         User jy5275
-        IdentityFile ~/.ssh/id_rsa_github
-
-    Host gl2.deliverwows.org
-        HostName gl2.deliverwows.org
-        Port 10443
-        User yan.jiang
-        IdentityFile ~/.ssh/id_rsa_aiprm
-
-    Host gl2.deliverwows.org
-        HostName gl2.deliverwows.org
-        Port 33899
-        User yan.jiang
-        IdentityFile ~/.ssh/id_rsa_aiprm
+        IdentityFile ~/.ssh/id_rsa
     ```
 
-4. Test authentication:
-
-    ```sh
-    ssh -T git@github.com
-    ssh -T git@gl2.deliverwows.org -p 33899
-    ```
-
-5. Set global gitconfig. Copy to `~/.gitconfig`:
+4. Set global gitconfig. Copy to `~/.gitconfig`:
 
     ```sh
     [core]
@@ -62,11 +44,11 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
         default = simple
     ```
 
-6. Set company repository gitconfig. Checkout to repository and run:
+5. Set company repository gitconfig. Checkout to repository and run:
 
     ```sh
     git config --local user.name "yan.jiang"
-    git config --local user.email "yan.jiang@aiprm.org"
+    git config --local user.email "yan.jiang@canonical.org"
     
     # ====================== OR ======================
 
@@ -76,7 +58,7 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
 
         # Execute git commands
         git config --local user.name "yan.jiang"
-        git config --local user.email "yan.jiang@aiprm.org"
+        git config --local user.email "yan.jiang@canonical.org"
 
         # Navigate back to the parent directory
         cd ..
@@ -87,21 +69,15 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
 
 Clone this repos and run `init.sh` (DO NOT use sudo!)
 
-## Hosts
+## Setup GPG key for Canonical
 
-For WSL, need to update `C:\Windows\System32\drivers\etc\hosts`, instead of the hosts on WSL!
-
-```sh
-sudo chmod a+w /etc/hosts
-sudo cat hosts >> /etc/hosts
-sudo chmod 644 /etc/hosts
-```
+TODO...
 
 ## Install necessary softwares
 
 ```sh
 sudo apt update
-sudo apt install -y tmux git make docker.io net-tools nodejs npm
+sudo apt install -y tmux git make docker.io net-tools
 
 # docker permission
 sudo groupadd docker
@@ -114,10 +90,10 @@ sudo chmod a+rw /var/run/docker.sock
 ## New Windows Setup
 
 ### Overall
-- Platform: Chrome, Google Drive, WSL
+- Platform: Chrome, Dropbox, WSL
 - IDE: VSCode, (GoLand)
-- DevTool: Xshell, Xftp, DBeaver, Postman
-- Comm: WeChat, Slack, WhatsApp, Telegram
+- DevTool: Xshell, Xftp, Postman
+- Comm: WeChat, Mattermost, WhatsApp, Telegram
 - Network: Surfshark, V2rayN
 - Learning: Eudic, Foxit
 
