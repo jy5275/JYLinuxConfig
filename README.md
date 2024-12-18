@@ -68,6 +68,11 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
 ## Config files, bash init, go1.21
 
 Clone this repos and run `init.sh` (DO NOT use sudo!)
+```sh
+git clone git@github.com:jy5275/JYLinuxConfig.git
+cd JYLinuxConfig/
+./init.sh
+```
 
 ## Setup GPG key for Canonical
 
@@ -77,7 +82,8 @@ TODO...
 
 ```sh
 sudo apt update
-sudo apt install -y tmux git make docker.io net-tools
+sudo apt install -y tmux git make docker.io net-tools python3-pip
+sudo snap install go --classic
 
 # docker permission
 sudo groupadd docker
