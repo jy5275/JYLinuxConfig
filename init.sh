@@ -13,8 +13,3 @@ cp .tmux.conf ~/
 
 mkdir -p ~/repos
 mkdir -p ~/Downloads
-
-# install go1.21
-cd ~/Downloads && wget https://go.dev/dl/go1.21.8.linux-amd64.tar.gz
-tar -xzf go1.21.8.linux-amd64.tar.gz
-echo "go1.21 installed"
