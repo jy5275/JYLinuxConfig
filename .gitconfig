@@ -4,8 +4,8 @@
 [credential]
     helper = store
 [user]
-	name = jy5275
-	email = yanjiangpku@gmail.com
+    name = jy5275
+    email = yanjiangpku@gmail.com
 
 [push]
-	default = simple
+    default = simple
