@@ -10,6 +10,7 @@ fi
 cp .bash_aliases ~/
 cp .vimrc ~/
 cp .tmux.conf ~/
+cp .gitconfig ~/
 
 mkdir -p ~/repos
 mkdir -p ~/Downloads
