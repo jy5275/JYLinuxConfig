@@ -29,22 +29,7 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
         IdentityFile ~/.ssh/id_rsa
     ```
 
-4. Set global gitconfig. Copy to `~/.gitconfig`:
-
-    ```sh
-    [core]
-        editor = vim
-        filemode = false
-    [credential]
-        helper = store
-    [user]
-        name = jy5275
-        email = yanjiangpku@gmail.com
-    [push]
-        default = simple
-    ```
-
-5. Set company repository gitconfig. Checkout to repository and run:
+4. Set company repository gitconfig. Checkout to repository and run:
 
     ```sh
     git config --local user.name "yan.jiang"
