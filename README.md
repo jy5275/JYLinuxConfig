@@ -50,31 +50,53 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
     done
     ```
 
-## Config files, bash init, go1.21
+## Config files, bash init
 
 Clone this repos and run `init.sh` (DO NOT use sudo!)
 ```sh
 git clone git@github.com:jy5275/JYLinuxConfig.git
 cd JYLinuxConfig/
 ./init.sh
+
+sudo su
+echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 ```
 
 ## Setup GPG key for Canonical
 
 TODO...
 
-## Install necessary softwares
+## Install packages
 
 ```sh
 sudo apt update
-sudo apt install -y tmux git make docker.io net-tools python3-pip
+sudo apt install -y tmux git make docker.io net-tools python3-pip j2cli
 sudo snap install go --classic
+sudo snap install snapcraft --classic
+sudo snap install lxd
 
-# docker permission
+# docker config
+sudo echo "net.ipv4.conf.all.forwarding=1" > /etc/sysctl.d/99-forwarding.conf
+systemctl restart systemd-sysctl
+
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo systemctl restart docker
 sudo chmod a+rw /var/run/docker.sock
+
+# LXD config
+lxd init --auto
+for ipt in iptables iptables-legacy ip6tables ip6tables-legacy; do $ipt --flush; $ipt --flush -t nat; $ipt --delete-chain; $ipt --delete-chain -t nat; $ipt -P FORWARD ACCEPT; $ipt -P INPUT ACCEPT; $ipt -P OUTPUT ACCEPT; done
+systemctl reload snap.lxd.daemon
+```
+
+## Repos
+```sh
+git clone git@github.com:canonical/workshop.git
+git clone git@github.com:canonical/sdkcraft.git
+git clone git@github.com:jy5275/keep-learning.git
+git clone https://github.com/sonic-net/sonic-mgmt.git
+git clone --recurse-submodules https://github.com/canonical/sonic-buildimage.git
 ```
 
 
