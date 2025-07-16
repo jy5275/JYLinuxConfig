@@ -26,14 +26,13 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
     Host github.com
         HostName github.com
         User jy5275
-        IdentityFile ~/.ssh/id_rsa
     ```
 
 4. Set company repository gitconfig. Checkout to repository and run:
 
     ```sh
     git config --local user.name "yan.jiang"
-    git config --local user.email "yan.jiang@canonical.org"
+    git config --local user.email "yan.jiang@canonical.com"
     
     # ====================== OR ======================
 
@@ -43,7 +42,7 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
 
         # Execute git commands
         git config --local user.name "yan.jiang"
-        git config --local user.email "yan.jiang@canonical.org"
+        git config --local user.email "yan.jiang@canonical.com"
 
         # Navigate back to the parent directory
         cd ..
@@ -92,8 +91,6 @@ systemctl reload snap.lxd.daemon
 
 ## Repos
 ```sh
-git clone git@github.com:canonical/workshop.git
-git clone git@github.com:canonical/sdkcraft.git
 git clone git@github.com:jy5275/keep-learning.git
 git clone https://github.com/sonic-net/sonic-mgmt.git
 git clone --recurse-submodules https://github.com/canonical/sonic-buildimage.git
