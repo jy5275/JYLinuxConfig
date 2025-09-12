@@ -94,6 +94,8 @@ systemctl reload snap.lxd.daemon
 git clone git@github.com:jy5275/keep-learning.git
 git clone https://github.com/sonic-net/sonic-mgmt.git
 git clone --recurse-submodules https://github.com/canonical/sonic-buildimage.git
+git clone https://github.com/canonical/switchdevd.git
+git clone https://github.com/dmitry-lyfar/spread.git
 ```
 
 
