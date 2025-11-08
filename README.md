@@ -53,6 +53,7 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
 
 Clone this repos and run `init.sh` (DO NOT use sudo!)
 ```sh
+mkdir ~/repos
 git clone git@github.com:jy5275/JYLinuxConfig.git
 cd JYLinuxConfig/
 ./init.sh
@@ -89,8 +90,14 @@ for ipt in iptables iptables-legacy ip6tables ip6tables-legacy; do $ipt --flush;
 systemctl reload snap.lxd.daemon
 ```
 
+
+## Install v2ray server
+https://github.com/233boy/v2ray/wiki/V2Ray%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B
+
+
 ## Repos
 ```sh
+cd ~/repos
 git clone git@github.com:jy5275/keep-learning.git
 git clone https://github.com/sonic-net/sonic-mgmt.git
 git clone --recurse-submodules https://github.com/canonical/sonic-buildimage.git
