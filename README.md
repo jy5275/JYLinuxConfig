@@ -76,7 +76,7 @@ sudo snap install snapcraft --classic
 sudo snap install lxd
 
 # docker config
-sudo echo "net.ipv4.conf.all.forwarding=1" > /etc/sysctl.d/99-forwarding.conf
+echo "net.ipv4.conf.all.forwarding=1" | sudo tee /etc/sysctl.d/99-forwarding.conf
 systemctl restart systemd-sysctl
 
 sudo groupadd docker
