@@ -28,25 +28,11 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
         User jy5275
     ```
 
-4. Set company repository gitconfig. Checkout to repository and run:
+4. Set company repository gitconfig:
 
     ```sh
-    git config --local user.name "yan.jiang"
-    git config --local user.email "yan.jiang@canonical.com"
-    
-    # ====================== OR ======================
-
-    for dir in */; do
-        # Navigate into the subdirectory
-        cd "$dir" || exit
-
-        # Execute git commands
-        git config --local user.name "yan.jiang"
-        git config --local user.email "yan.jiang@canonical.com"
-
-        # Navigate back to the parent directory
-        cd ..
-    done
+    git config --global user.name "yan.jiang"
+    git config --global user.email "yan.jiang@canonical.com"
     ```
 
 ## Config files, bash init
@@ -58,8 +44,7 @@ git clone git@github.com:jy5275/JYLinuxConfig.git
 cd JYLinuxConfig/
 ./init.sh
 
-sudo su
-echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+echo "ubuntu ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
 ```
 
 ## Setup GPG key for Canonical
