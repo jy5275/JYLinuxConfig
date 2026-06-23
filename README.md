@@ -20,15 +20,7 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
     ssh -T git@github.com
     ```
 
-3. Setup ssh config. Copy to `~/.ssh/config`:
-
-    ```rust
-    Host github.com
-        HostName github.com
-        User jy5275
-    ```
-
-4. Set company repository gitconfig:
+3. Set company repository gitconfig:
 
     ```sh
     git config --global user.name "yan.jiang"
@@ -45,6 +37,10 @@ cd JYLinuxConfig/
 ./init.sh
 
 echo "ubuntu ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers
+
+# Set password
+sudo su
+passwd ubuntu
 ```
 
 ## Setup GPG key for Canonical
@@ -83,11 +79,11 @@ https://github.com/233boy/v2ray/wiki/V2Ray%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E
 ## Repos
 ```sh
 cd ~/repos
-git clone git@github.com:jy5275/keep-learning.git
+git clone https://github.com/canonical/sonic-buildimage.git
 git clone https://github.com/sonic-net/sonic-mgmt.git
-git clone --recurse-submodules https://github.com/canonical/sonic-buildimage.git
 git clone https://github.com/canonical/switchdevd.git
 git clone https://github.com/dmitry-lyfar/spread.git
+git clone git@github.com:jy5275/keep-learning.git
 ```
 
 
