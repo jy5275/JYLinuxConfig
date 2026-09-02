@@ -14,3 +14,5 @@ cp .gitconfig ~/
 
 mkdir -p ~/repos
 mkdir -p ~/Downloads
+
+git config --global core.excludesFile ~/.config/git/ignore
