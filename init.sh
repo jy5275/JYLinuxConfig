@@ -15,6 +15,11 @@ cp .gitconfig ~/
 mkdir -p ~/repos
 mkdir -p ~/Downloads
 
-mkdir -p ~/.config/git
-grep -qxF '.opencode/' ~/.config/git/ignore 2>/dev/null || echo '.opencode/' >> ~/.config/git/ignore
-git config --global core.excludesFile ~/.config/git/ignore
+touch ~/.config/gitignore-global
+grep -qxF '.opencode/' ~/.config/gitignore-global 2>/dev/null || echo '.opencode/' >> ~/.config/gitignore-global
+git config --global core.excludesFile ~/.config/gitignore-global
+
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_rsa.pub
+git config --global commit.gpgsign true
+git config --global tag.gpgsign true
