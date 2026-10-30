@@ -20,13 +20,6 @@ Source: <https://www.cnblogs.com/cangqinglang/p/12462272.html>
     ssh -T git@github.com
     ```
 
-3. Set company repository gitconfig:
-
-    ```sh
-    git config --global user.name "yan.jiang"
-    git config --global user.email "yan.jiang@canonical.com"
-    ```
-
 ## Config files, bash init
 
 Clone this repos and run `init.sh` (DO NOT use sudo!)
@@ -43,9 +36,13 @@ sudo su
 passwd ubuntu
 ```
 
-## Setup GPG key for Canonical
+## gh auth
 
-TODO...
+```sh
+gh auth login
+gh auth refresh -h github.com -s admin:ssh_signing_key                             # Get permission to add signing key
+gh ssh-key add ~/.ssh/id_rsa.pub --type signing --title "${HOSTNAME} signing key"  # Add signing key
+```
 
 ## Install packages
 
